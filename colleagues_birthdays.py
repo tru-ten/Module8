@@ -82,7 +82,9 @@ def get_birthdays_per_week(users):
 
             birthdays_per_week[full_weekday_name].append(name)
 
-    # Вивід списку днів народжень колег у консоль, якщо такі є
+    # Вивід списку днів народжень колег від поточного дня у консоль, якщо такі є
+
+    print('\n')
 
     for iterator in range(date_now.weekday(),date_now.weekday()+7):
 
@@ -94,5 +96,7 @@ def get_birthdays_per_week(users):
         current_day= day_number[edit_iterator]
         list_full_weekday_name=birthdays_per_week[current_day]
         print(f"{current_day}: {', '.join(list_full_weekday_name)}")
+
+    print('\n')
 
 get_birthdays_per_week(users)
